@@ -34,7 +34,7 @@ string[] GetArrayThreeSymbol (string[] array)
         string symbol = array[i];
         if (symbol.Length <= 3)
         {
-            arrayThreeSymbol[j] = simvol;
+            arrayThreeSymbol[j] = symbol;
             j++;
         }
     }
@@ -57,7 +57,7 @@ Console.WriteLine();
 // присваиваем массиву преобразованную строку через метод `string[] arraySymbol = GetArrayStringConsole(inStringSymbol)`
 Console.Write("Введите набор символов через запятую : ");
 string inStringSymbol = Console.ReadLine()!;
-string[] arraySymbol = GetArrayStringConsole(inStringSymbol);
+string[] arraySymbol = GetArrayStringConsole(inStringSymbol)!;
 Console.WriteLine();
 Console.Write("Ваши введенные символы : ");
 Print(arraySymbol);
