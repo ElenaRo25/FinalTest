@@ -14,9 +14,9 @@ string[] GetArrayStringConsole (string inConsolSymbol)
     return arraySymbol;
 }
 
-// Cоздаем метод, сортирующий символы из массива.
+// Cоздаем метод, сортирующий символы из массива:
 // Отсчитываем количество удовлетворяющих требований для определения длинны нового массива.
-// Создаем массив по выясненому количеству и заносим туда символы, удовлетворяющие требованиям:
+// Создаем массив по выясненому количеству и заносим туда символы, удовлетворяющие требованиям.
 string[] GetArrayThreeSymbol (string[] array)
 {
     int count = 0;
@@ -50,3 +50,18 @@ void Print (string[] array)
     }
 Console.WriteLine();
 }
+
+// Создаем "клиентский код" для вызова методов и обработки информации через консоль:
+// выводим поясняющую информационную строку для пользователя в консоле: "Введите набор символов через запятую : "
+// присваиваем введенное в консоле от пользователя символы "string inStringSymbol = console.ReadLine()!"
+// присваиваем массиву преобразованную строку через метод `string[] arraySymbol = GetArrayStringConsole(inStringSymbol)`
+Console.Write("Введите набор символов через запятую : ");
+string inStringSymbol = Console.ReadLine()!;
+string[] arraySymbol = GetArrayStringConsole(inStringSymbol);
+Console.WriteLine();
+Console.Write("Ваши введенные символы : ");
+Print(arraySymbol);
+Console.WriteLine();
+Console.Write("Ваши введенные символы длинной меньше либо равны 3 : ");
+Print(GetArrayThreeSymbol(arraySymbol));
+Console.WriteLine();
