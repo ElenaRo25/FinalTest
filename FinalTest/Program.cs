@@ -6,7 +6,7 @@
 
 // Решение:
 
-// Cоздаем метод для разделения строки из консоли в массив по знаку ","
+// Cоздаем метод для разделения строки из консоли в массив по знаку ",":
 string[] GetArrayStringConsole (string inConsolSymbol)
 {
     string[] arraySymbol = new string[inConsolSymbol.Length];
@@ -16,7 +16,7 @@ string[] GetArrayStringConsole (string inConsolSymbol)
 
 // Cоздаем метод, сортирующий символы из массива.
 // Отсчитываем количество удовлетворяющих требований для определения длинны нового массива.
-// Создаем массив по выясненому количеству и заносим туда символы, удовлетворяющие требованиям.
+// Создаем массив по выясненому количеству и заносим туда символы, удовлетворяющие требованиям:
 string[] GetArrayThreeSymbol (string[] array)
 {
     int count = 0;
@@ -39,4 +39,14 @@ string[] GetArrayThreeSymbol (string[] array)
         }
     }
     return arrayThreeSymbol;
+}
+
+// Создаем метод для вывода информации из массивов с использованием циклического вывода каждого элемента массива:
+void Print (string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+Console.WriteLine();
 }
