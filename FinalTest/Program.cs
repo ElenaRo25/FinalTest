@@ -13,3 +13,30 @@ string[] GetArrayStringConsole (string inConsolSymbol)
     arraySymbol = inConsolSymbol.Split(",");
     return arraySymbol;
 }
+
+// Cоздаем метод, сортирующий символы из массива.
+// Отсчитываем количество удовлетворяющих требований для определения длинны нового массива.
+// Создаем массив по выясненому количеству и заносим туда символы, удовлетворяющие требованиям.
+string[] GetArrayThreeSymbol (string[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        string symbol = array[i];
+        if (symbol.Length <= 3)
+        {
+            count++;
+        }
+    }
+    string[] arrayThreeSymbol = new string[count];
+    for (int i = 0, j = 0; i < array.Length; i++)
+    {
+        string symbol = array[i];
+        if (symbol.Length <= 3)
+        {
+            arrayThreeSymbol[j] = simvol;
+            j++;
+        }
+    }
+    return arrayThreeSymbol;
+}
